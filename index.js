@@ -29,7 +29,7 @@ function Sprite(x, y, w, h){
 
 
 var img = new Image();
-img.onload = initSprites(this);
+img.onload = function(){initSprites(this);};
 img.src = "res/sprites.png";
 
 function initSprites(img){
