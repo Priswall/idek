@@ -11,7 +11,7 @@ function resizeWindow(){
     canvas.width = window.innerHeight;
     canvas.height = window.innerHeight;
   }
-};
+}
 
 
 function Sprite(x, y, w, h){
@@ -25,7 +25,7 @@ function Sprite(x, y, w, h){
     c.drawImage(this.y, this.y, this.w, this.h, x, y, this.w, this.h);
   };
   
-};
+}
 
 
 var img = new Image();
@@ -34,11 +34,11 @@ img.src = "res/sprites.png";
 
 function initSprites(img){
   
-  for(var i = 0; i < sprites.width/10; i++){
+  for(var i = 0; i < img.width/10; i++){
   
     blocks[i] = new Sprite(i * 10, i%4, 10, 10);
     
-  };
+  }
   
 }
 
