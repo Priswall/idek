@@ -1,5 +1,5 @@
 var canvas = document.getElementById("canvas");
-c = canvas.getContext("2d");
+var c = canvas.getContext("2d");
 
 var blocks = [];
 
