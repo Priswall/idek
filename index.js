@@ -34,11 +34,21 @@ img.src = "res/sprites.png";
 
 function initSprites(img){
   
-  for(var i = 0; i < img.width/10; i++){
+  blocks = [
   
-    blocks[i] = new Sprite(i * 10, i%4, 10, 10);
-    
-  }
+     new Sprite(0, 0, 10, 10),
+     new Sprite(10, 0, 10, 10),
+     new Sprite(20, 0, 10, 10),
+     new Sprite(30, 0, 10, 10),
+     new Sprite(0, 10, 10, 10),
+     new Sprite(10, 10, 10, 10),
+     new Sprite(20, 10, 10, 10),
+     new Sprite(30, 10, 10, 10),
+     new Sprite(0, 20, 10, 10),
+     new Sprite(10, 20, 10, 10),
+     new Sprite(20, 20, 10, 10)
+  
+  ];
   
 }
 
