@@ -53,7 +53,7 @@ function initSprites(img){
 }
 
 var script = document.createElement('script');
-script.src = "js/game.js";
+script.src = "game.js";
 script.async = true;
 document.body.appendChild(script);
 
