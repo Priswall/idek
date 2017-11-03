@@ -22,8 +22,8 @@ function Sprite(img, x, y, w, h){
   this.w = w;
   this.h = h;
   
-  this.draw = function(x, y){
-    c.drawImage(this.img, this.y, this.y, this.w, this.h, x, y, this.w, this.h);
+  this.draw = function(x, y, w, h){
+    c.drawImage(this.img, this.y, this.y, this.w, this.h, x, y, w, h);
   };
   
 }
