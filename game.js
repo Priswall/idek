@@ -59,13 +59,13 @@ function keypress(e){
 
 function keyrelease(e){
 
-  if(e.keyCode === 65 || e.keyCode === 37 && ){
+  if(e.keyCode === 65 || e.keyCode === 37 && player.vel > 0){
   
     player.vel -= player.acc;
     player.x -= player.vel;
     
   }
-  if(e.keyCode === 68 || e.keyCode === 39){
+  if(e.keyCode === 68 || e.keyCode === 39 && player.vel < 0){
   
     player.vel += player.acc;
     player.x += player.vel;
