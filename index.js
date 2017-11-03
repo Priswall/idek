@@ -14,15 +14,16 @@ function resizeWindow(){
 }
 
 
-function Sprite(x, y, w, h){
+function Sprite(img, x, y, w, h){
 
+  this.img = img;
   this.x = x;
   this.y = y;
   this.w = w;
   this.h = h;
   
   this.draw = function(x, y){
-    c.drawImage(this.y, this.y, this.w, this.h, x, y, this.w, this.h);
+    c.drawImage(this.img, this.y, this.y, this.w, this.h, x, y, this.w, this.h);
   };
   
 }
@@ -36,17 +37,17 @@ function initSprites(img){
   
   blocks = [
   
-     new Sprite(0, 0, 10, 10),
-     new Sprite(10, 0, 10, 10),
-     new Sprite(20, 0, 10, 10),
-     new Sprite(30, 0, 10, 10),
-     new Sprite(0, 10, 10, 10),
-     new Sprite(10, 10, 10, 10),
-     new Sprite(20, 10, 10, 10),
-     new Sprite(30, 10, 10, 10),
-     new Sprite(0, 20, 10, 10),
-     new Sprite(10, 20, 10, 10),
-     new Sprite(20, 20, 10, 10)
+     new Sprite(img, 0, 0, 10, 10),
+     new Sprite(img, 10, 0, 10, 10),
+     new Sprite(img, 20, 0, 10, 10),
+     new Sprite(img, 30, 0, 10, 10),
+     new Sprite(img, 0, 10, 10, 10),
+     new Sprite(img, 10, 10, 10, 10),
+     new Sprite(img, 20, 10, 10, 10),
+     new Sprite(img, 30, 10, 10, 10),
+     new Sprite(img, 0, 20, 10, 10),
+     new Sprite(img, 10, 20, 10, 10),
+     new Sprite(img, 20, 20, 10, 10)
   
   ];
   
