@@ -32,6 +32,7 @@ function Player(x, y){
   };
   
 };
+var player = new Player(canvas.width/2, (canvas.height/6)*5);
 
 function keypress(e){
 
