@@ -80,7 +80,7 @@ function Player(x, y){
   };
   
 }
-var player = new Player(canvas.width/2, (canvas.height/10) * 9);
+var player = new Player(canvas.width/2, canvas.height - (canvas.height/10));
 
 function keypress(e){
 
