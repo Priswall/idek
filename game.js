@@ -1,5 +1,3 @@
-
-
 function Block(x, y, c){
   
   this.x = x;
@@ -11,7 +9,7 @@ function Block(x, y, c){
     
   };
   
-};
+}
 
 function Player(x, y){
   
@@ -26,7 +24,7 @@ function Player(x, y){
     
   };
   
-};
+}
 var player = new Player(canvas.width/2, (canvas.height/6)*5);
 
 function loop(){
@@ -57,7 +55,7 @@ function keypress(e){
     
   }
   
-};
+}
 
 function keyrelease(e){
 
@@ -74,7 +72,7 @@ function keyrelease(e){
     
   }
   
-};
+}
 
 window.requestAnimationFrame(loop);
 window.addEventListener("keydown", keypress);
