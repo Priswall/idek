@@ -1,9 +1,4 @@
-function loop(){
-  c.fillStyle = "white";
-  c.fillRect(0, 0, canvas.width, canvas.height);
-  blocks[10].draw(50, 50, canvas.width/10, canvas.width/10);
-  window.requestAnimationFrame(loop);
-}
+
 
 function Block(x, y, c){
   
@@ -33,6 +28,13 @@ function Player(x, y){
   
 };
 var player = new Player(canvas.width/2, (canvas.height/6)*5);
+
+function loop(){
+  c.fillStyle = "white";
+  c.fillRect(0, 0, canvas.width, canvas.height);
+  player.show();
+  window.requestAnimationFrame(loop);
+}
 
 function keypress(e){
 
