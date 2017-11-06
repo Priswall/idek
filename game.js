@@ -70,17 +70,6 @@ function Player(x, y){
 }
 var player = new Player(canvas.width/2, (canvas.height/10)*9);
 
-function loop(){
-  canvas.width = window.innerHeight;
-  canvas.height = window.innerHeight;
-  canvas.style.left = (window.innerWidth / 2) - (canvas.width / 2);
-  c.fillStyle = "white";
-  c.fillRect(0, 0, canvas.width, canvas.height);
-  player.update();
-  player.show();
-  window.requestAnimationFrame(loop);
-}
-
 function keypress(e){
 
   if(e.keyCode === 65 || e.keyCode === 37){
@@ -109,6 +98,17 @@ function keyrelease(e){
     
   }
   
+}
+
+function loop(){
+  canvas.width = window.innerHeight;
+  canvas.height = window.innerHeight;
+  canvas.left = (window.innerWidth / 2) - (canvas.width / 2);
+  c.fillStyle = "white";
+  c.fillRect(0, 0, canvas.width, canvas.height);
+  player.update();
+  player.show();
+  window.requestAnimationFrame(loop);
 }
 
 window.requestAnimationFrame(loop);
