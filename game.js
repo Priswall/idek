@@ -76,6 +76,7 @@ function loop(){
   canvas.style.left = (window.innerWidth / 2) - (canvas.width / 2);
   c.fillStyle = "white";
   c.fillRect(0, 0, canvas.width, canvas.height);
+  player.update();
   player.show();
   window.requestAnimationFrame(loop);
 }
