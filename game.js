@@ -63,7 +63,7 @@ function Player(x, y){
   };
   this.show = function(){
     
-    blocks[10].draw(this.x, this.y, canvas.width/5, canvas.width/5);
+    blocks[10].draw(this.x, this.y, canvas.width/10, canvas.width/10);
     
   };
   
