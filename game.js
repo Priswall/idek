@@ -60,6 +60,18 @@ function Player(x, y){
       
     }
     
+    if(this.x > (canvas.width / 10) * 9){
+      
+      this.x = (canvas.width / 10) * 9;
+      
+    }
+    
+    if(this.x < 0){
+      
+      this.x = 0;
+      
+    }
+    
   };
   this.show = function(){
     
@@ -68,7 +80,7 @@ function Player(x, y){
   };
   
 }
-var player = new Player(canvas.width/2, (canvas.height/10)*9);
+var player = new Player(canvas.width/2, (canvas.height/10) * 9);
 
 function keypress(e){
 
