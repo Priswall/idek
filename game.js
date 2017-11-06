@@ -63,12 +63,12 @@ function Player(x, y){
   };
   this.show = function(){
     
-    blocks[10].draw(this.x, this.y, canvas.width/10, (canvas.height/10) * 9);
+    blocks[10].draw(this.x, this.y, canvas.width/10, canvas.width/10);
     
   };
   
 }
-var player = new Player(canvas.width/2, (canvas.height/6)*5);
+var player = new Player(canvas.width/2, (canvas.height/10)*9);
 
 function loop(){
   canvas.width = window.innerHeight;
