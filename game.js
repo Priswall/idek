@@ -30,6 +30,7 @@ var player = new Player(canvas.width/2, (canvas.height/6)*5);
 function loop(){
   canvas.width = window.innerHeight;
   canvas.height = window.innerHeight;
+  canvas.style.left = (window.innerWidth / 2) - (canvas.width / 2);
   c.fillStyle = "white";
   c.fillRect(0, 0, canvas.width, canvas.height);
   player.show();
@@ -38,7 +39,7 @@ function loop(){
 
 function keypress(e){
 
-  if(e.keyCode === 68 || e.keyCode === 39){
+  if(e.keyCode === 65 || e.keyCode === 37){
   
     player.vel += player.acc;
     if(player.vel > player.maxSpeed){
@@ -47,7 +48,7 @@ function keypress(e){
     player.x += player.vel;
     
   }
-  if(e.keyCode === 65 || e.keyCode === 37){
+  if(e.keyCode === 68 || e.keyCode === 39){
   
     player.vel -= player.acc;
     if(player.vel < -player.maxSpeed){
@@ -61,9 +62,16 @@ function keypress(e){
 
 function keyrelease(e){
 
-  if(e.keyCode === 65 || e.keyCode === 37 || e.keyCode === 68 || e.keyCode === 39){
+  if(e.keyCode === 65 || e.keyCode === 37 && player.vel > 0){
   
-    player.vel = 0;
+    player.vel -= player.acc;
+    player.x -= player.vel;
+    
+  }
+  if(e.keyCode === 68 || e.keyCode === 39 && player.vel < 0){
+  
+    player.vel += player.acc;
+    player.x += player.vel;
     
   }
   
