@@ -15,9 +15,52 @@ function Player(x, y){
   
   this.x = x;
   this.y = y;
+  this.left = false;
+  this.right = false;
   this.vel = 0;
-  this.acc = 0.2;
-  this.maxSpeed = 3;
+  this.acc = 0.5;
+  this.maxSpeed = 10;
+  this.update = function(){
+  
+    if(this.right){
+    
+      this.vel += this.acc;
+      if(this.vel > this.maxSpeed){
+        this.vel = this.maxSpeed;
+     }
+     this.x += this.vel;
+      
+    }
+  
+    if(this.left){
+    
+      this.vel -= this.acc;
+      if(this.vel < -this.maxSpeed){
+        this.vel = -this.maxSpeed;
+     }
+     this.x += this.vel;
+      
+    }
+  
+    if(!this.right && !this.left && this.vel !== 0){
+      
+      if(this.vel < 0){
+      
+        this.vel += this.acc;
+        this.x += this.vel;
+        
+      }
+      
+      if(this.vel > 0){
+      
+        this.vel -= this.acc;
+        this.x += this.vel;
+        
+      }
+      
+    }
+    
+  };
   this.show = function(){
     
     blocks[10].draw(this.x, this.y, canvas.width/5, canvas.width/5);
@@ -40,21 +83,13 @@ function loop(){
 function keypress(e){
 
   if(e.keyCode === 65 || e.keyCode === 37){
-  
-    player.vel += player.acc;
-    if(player.vel > player.maxSpeed){
-      player.vel = player.maxSpeed;
-    }
-    player.x += player.vel;
+    
+    player.right = true;
     
   }
   if(e.keyCode === 68 || e.keyCode === 39){
-  
-    player.vel -= player.acc;
-    if(player.vel < -player.maxSpeed){
-      player.vel = -player.maxSpeed;
-    }
-    player.x -= player.vel;
+    
+    player.left = true;
     
   }
   
@@ -62,16 +97,14 @@ function keypress(e){
 
 function keyrelease(e){
 
-  if(e.keyCode === 65 || e.keyCode === 37 && player.vel > 0){
-  
-    player.vel -= player.acc;
-    player.x -= player.vel;
+  if(e.keyCode === 65 || e.keyCode === 37){
+    
+    player.left = false;
     
   }
-  if(e.keyCode === 68 || e.keyCode === 39 && player.vel < 0){
-  
-    player.vel += player.acc;
-    player.x += player.vel;
+  if(e.keyCode === 68 || e.keyCode === 39){
+    
+    player.right = false;
     
   }
   
