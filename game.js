@@ -85,12 +85,12 @@ function keypress(e){
 
   if(e.keyCode === 65 || e.keyCode === 37){
     
-    player.right = true;
+    player.left = true;
     
   }
   if(e.keyCode === 68 || e.keyCode === 39){
     
-    player.left = true;
+    player.right = true;
     
   }
   
