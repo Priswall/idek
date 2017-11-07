@@ -171,7 +171,7 @@ function arrayloop(a){
 
    for(var i = 0; i < a.length; i++){
      
-     a.show();
+     a[i].show();
      
    }
 
