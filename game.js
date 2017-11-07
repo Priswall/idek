@@ -15,7 +15,7 @@ var Button = function(state, x, y, w, h, t, f){
   
     if(gameState === this.state){
     
-      if(e.clientX > this.x && e.clientX < this.x + (this.w * 2) && e.clientY > this.y && e.clientY < this.y + this.h){
+      if(e.clientX > this.x && e.clientX < this.x + this.w && e.clientY > this.y && e.clientY < this.y + this.h){
         
         this.f();
         
